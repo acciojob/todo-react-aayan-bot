@@ -12,10 +12,10 @@ return;
   setInput("")
   }
   const handledelete =(indextoremove)=>{
-    setList((prev)=>{
+    setList((prev)=>
       prev.filter((_,index)=>
-        index!==indextoremove
-    )})
+        index!==indextoremove ))
+  }
   return (
     <div>
         {/* Do not remove the main div */}
@@ -42,5 +42,5 @@ return;
     </div>
   )
 }
-}
+
 export default App
