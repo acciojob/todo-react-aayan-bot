@@ -11,11 +11,9 @@ return;
   setList([...list,input]);
   setInput("")
   }
-  const handledelete =(indextoremove)=>{
-    setList((prev)=>
-      prev.filter((_,index)=>
-        index!==indextoremove ))
-  }
+  const handledelete =(indextoremove)=>(
+    setList((prev)=> prev.filter((_,index)=> index!==indextoremove ))
+  )
   return (
     <div>
         {/* Do not remove the main div */}
@@ -31,12 +29,12 @@ return;
         <button onClick={handleclick}>Add to list</button>
         <ul>
          {
-          list.map((item,index)=>{
+          list.map((item,index)=>(
             <div key={index}>
-            <li >{item}</li>
+            <li>{item}</li>
             <button onClick={()=>handledelete(index)}>delete</button>
             </div>
-          })
+          ))
          }
         </ul>
     </div>
